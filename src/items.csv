@@ -1,0 +1,7 @@
+name,imgSrc,price
+Ice Tea,../src/ice-tea.jpg,$5
+Lemonade,../src/lemonade.jpg,$5
+Coffee,../src/coffee.jpg,$5
+Pizza,../src/pizza.jpg,$18
+Steak,../src/steak.jpg,$35
+Burger,../src/burger.jpg,$20

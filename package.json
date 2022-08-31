@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/OnTheHook/restaurant-page#readme",
   "devDependencies": {
+    "csv-loader": "^3.0.5",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
   }
