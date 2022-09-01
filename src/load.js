@@ -1,4 +1,4 @@
-function loadHTML() {
+function loadNav() {
     const mainDiv = document.createElement('div')
     mainDiv.id = 'main'
 
@@ -8,10 +8,29 @@ function loadHTML() {
     const linkTwo = document.createElement('li')
     const linkThree = document.createElement('li')
 
-    linkOne.innerHTML = '<a href="#">HOME</a>'
-    linkTwo.innerHTML = '<a href="#">MENU</a>'
-    linkThree.innerHTML = '<a href="#">CONTACT</a>'
+    nav.id = 'navigation'
 
+    linkOne.textContent = 'HOME'
+    linkTwo.textContent = 'MENU'
+    linkThree.textContent = 'CONTACT'
+
+    linkOne.id = 'home'
+    linkTwo.id = 'menu'
+    linkThree.id = 'contact'
+
+    navList.appendChild(linkOne)
+    navList.appendChild(linkTwo)
+    navList.appendChild(linkThree)
+
+    nav.appendChild(navList)
+
+    mainDiv.appendChild(nav)
+
+    return mainDiv
+}
+
+function home() {
+    
     const logoDiv = document.createElement('div')
     const logo = document.createElement('img')
     const heading = document.createElement('h1')
@@ -26,13 +45,7 @@ function loadHTML() {
     const button = document.createElement('button')
 
     buttonDiv.classList.add('button')
-    button.textContent = 'RESERVE A TABLE'
-
-    navList.appendChild(linkOne)
-    navList.appendChild(linkTwo)
-    navList.appendChild(linkThree)
-
-    nav.appendChild(navList)
+    button.textContent = 'RESERVE A TABLE'    
 
     logoDiv.appendChild(logo)
     logoDiv.appendChild(heading)
@@ -40,12 +53,12 @@ function loadHTML() {
 
     buttonDiv.appendChild(button)
 
-    mainDiv.appendChild(nav)
-    mainDiv.appendChild(logoDiv)
-    mainDiv.appendChild(buttonDiv)
-
-    return mainDiv
+    return [logoDiv, buttonDiv]
 
 }
 
-export default loadHTML
+
+export default loadNav
+export {
+    home
+}

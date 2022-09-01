@@ -1,6 +1,7 @@
 import Items from './items.csv';
 
 function menu() {
+    let items = []
     function createItemDiv(name, imgSrc, price) {
         const itemDiv = document.createElement('div')
         const itemName = document.createElement('h2')
@@ -18,34 +19,14 @@ function menu() {
         return itemDiv
     }
 
-    const mainDiv = document.createElement('div')
-    mainDiv.id = 'main'
-
-    const nav = document.createElement('nav')
-    const navList = document.createElement('ul')
-    const linkOne = document.createElement('li')
-    const linkTwo = document.createElement('li')
-    const linkThree = document.createElement('li')
-
-    linkOne.innerHTML = '<a href="#">HOME</a>'
-    linkTwo.innerHTML = '<a href="#">MENU</a>'
-    linkThree.innerHTML = '<a href="#">CONTACT</a>'
-
-    navList.appendChild(linkOne)
-    navList.appendChild(linkTwo)
-    navList.appendChild(linkThree)
-
-    nav.appendChild(navList)
-
-    mainDiv.appendChild(nav)
 
     for(let i = 1; i < Items.length; i++) {
         let newDiv
         newDiv = createItemDiv(...Items[i])
-        mainDiv.appendChild(newDiv)
+        items.push(newDiv)
     }
 
-    return mainDiv
+    return items
 }
 
 export default menu

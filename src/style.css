@@ -33,10 +33,15 @@ button {
     border: #FFFFFF solid 4px;
 }
 
-a {
-    text-decoration: none;
+li {
     color: #000000;
     font-weight: bold;
+    padding: 14px 10px;
+}
+
+li.current {
+    background-color: #000000;
+    color:#FFFFFF;
 }
 
 img {
@@ -55,9 +60,7 @@ img {
     background-color: rgba(0, 0, 0, 0.50);
 }
 
-nav {
-    padding-top: 14px;
-    padding-bottom: 14px;
+nav {    
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
