@@ -37,6 +37,7 @@ li {
     color: #000000;
     font-weight: bold;
     padding: 14px 10px;
+    cursor: pointer;
 }
 
 li.current {
@@ -64,6 +65,7 @@ nav {
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
+    margin-bottom: 14px;
 }
 
 nav ul {
